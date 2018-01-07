@@ -1,37 +1,58 @@
-## Welcome to GitHub Pages
+An Event Driven Utility Billing System 
 
-You can use the [editor on GitHub](https://github.com/nilotpolasarma/BillMaster/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+It is a web application
+Getting Started
+How to use the product.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Prerequisites
 
-### Markdown
+What things you need to install the software and how to install them
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Give examples
 
-```markdown
-Syntax highlighted code block
+Installing
 
-# Header 1
-## Header 2
-### Header 3
+A step by step series of examples that tell you have to get a development env running
 
-- Bulleted
-- List
+Say what the step will be
 
-1. Numbered
-2. List
+Give the example
 
-**Bold** and _Italic_ and `Code` text
+And repeat
 
-[Link](url) and ![Image](src)
-```
+until finished
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+Running the tests
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nilotpolasarma/BillMaster/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+How to run the automated tests for this system
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Explain what these tests test and why
+
+Give an example
+
+And coding style tests
+
+Explain what these tests test and why
+
+Give an example
+
+Deployment
+
+
+
+Contributing
+
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+Authors
+
+    Nilotpola Sarma 
+    Piyush Jain
+
+See also the list of contributors who participated in this project.
+
+Acknowledgments
+
+    

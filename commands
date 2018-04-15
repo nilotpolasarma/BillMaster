@@ -1,0 +1,79 @@
+create table Users(
+   user_id INT,
+   user_name VARCHAR(100),
+   role VARCHAR(40) NOT NULL,
+   PRIMARY KEY ( user_id )
+);
+INSERT INTO Users ( user_id, user_name,role ) VALUES (1, "John", "Biller");
+INSERT INTO Users ( user_id, user_name,role ) VALUES (2, "Jack", "Admin");
+INSERT INTO Users ( user_id, user_name,role ) VALUES (3, "Maria", "Meter Enterer");
+INSERT INTO Users ( user_id, user_name,role ) VALUES (4, "Sara", "Cashier");
+create table Events(
+   event_id INT,
+   consumer_id INT,
+   event_time TIMESTAMP,
+   user_id_enterer INT,
+   event_name VARCHAR(100),
+   PRIMARY KEY ( event_id )
+);
+INSERT INTO Events(event_id, consumer_id, event_time, user_id_enterer, event_name) VALUES(1,1,'2018-04-15 17:23:55',3, "Meter Entering");
+INSERT INTO Events(event_id, consumer_id, event_time, user_id_enterer, event_name) VALUES(2,2,'2018-04-16 17:20:55',3, "Meter Entering");
+select order_id, delivery_id, delivery_date, to_char(delivery_time,'hh24:mi:ss') from Events;
+create table Consumers(
+   consumer_id INT,
+   consumer_slab INT,
+   consumer_type INT,//1 = Home 2= Commercial
+   consumer_tariff INT,
+   consumer_meter_id INT,
+   consumer_name VARCHAR(100),
+   PRIMARY KEY ( consumer_id )
+);
+INSERT INTO Consumers(consumer_id, consumer_slab, consumer_type, consumer_tariff, consumer_meter_id, consumer_name)VALUES(1, 2, 1, 20, 10, "Venus"); 
+INSERT INTO Consumers(consumer_id, consumer_slab, consumer_type, consumer_tariff, consumer_meter_id, consumer_name)VALUES(2, 2, 1, 20, 15, "Olga");
+create table Meters(
+   meter_id INT,
+   consumer_id INT,
+   last_reading FLOAT,
+   last_reading_date DATE,
+   installation_date DATE,
+   PRIMARY KEY ( meter_id )
+);
+INSERT INTO Meters(meter_id, consumer_id, last_reading, last_reading_date, installation_date)VALUES(1, 1, 234.78, '2018-04-14 17:23:55', '2018-01-01');
+INSERT INTO Meters(meter_id, consumer_id, last_reading, last_reading_date, installation_date)VALUES(2, 2, 734.78, '2018-04-14 14:23:55', '2018-01-01');
+
+create table MeterChange(
+	event_id INT,
+	meter_id_new INT,
+	new_reading FLOAT,
+	old_reading FLOAT,
+	PRIMARY KEY(event_id)
+);
+create table Payment(
+	receipt_number INT,
+	event_id INT,
+	consumer_id INT,
+	amount FLOAT,
+	mode VARCHAR(100),
+	PRIMARY KEY (receipt_number)
+);
+create table Billing(
+	bill_id INT,
+	event_id INT,
+	billing_date DATE,
+	due_date DATE,
+	amount FLOAT,
+	PRIMARY KEY(bill_id)
+);
+create table MeterReading(
+	event_id INT,
+	meter_id INT,
+	reading FLOAT,
+	PRIMARY KEY (event_id)
+);
+
+	
+
+
+
+
+
